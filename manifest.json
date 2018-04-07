@@ -24,5 +24,8 @@
   "chrome_settings_overrides": {
     "homepage": "homePage/index.html"
   },
+  "chrome_url_overrides": {
+    "newtab": "homePage/index.html"
+  },
   "permissions": ["tabs", "activeTab", "storage"]
 }

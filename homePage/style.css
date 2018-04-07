@@ -1,8 +1,15 @@
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
+    width: 200px;
+    display: inline-block;
+    height: 85px;
+    padding-top: 65px;
     text-align: center;
+    margin: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: Arial;
+    color: #888;
 }
 
 .title {
@@ -10,31 +17,6 @@
     font-size: 18px;
 }
 
-.cardHolder {
-    display: grid;
-    grid-gap: 10px;
-  }
-
-
-button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
+#cardHolder {
     text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-a {
-    text-decoration: none;
-    font-size: 22px;
-    color: #0c0c0d;
-}
-
-button:hover, a:hover {
-    opacity: 0.7;
 }

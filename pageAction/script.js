@@ -11,7 +11,7 @@ newProfile.addEventListener('keyup', (e)=> {
         const gettingItem = browser.storage.local.get('shivamsTabs'); 
         gettingItem.then((res) => {
             const profiles = res.shivamsTabs || {};
-            const key = value.replace(/^\s+|\s+$/g, '');
+            const key = value.replace(/ /g, '');
             profiles[key] = {
                 name: value,
                 urls: []
@@ -46,7 +46,8 @@ profileHolder.addEventListener('click', e => {
         const gettingItem = browser.storage.local.get('shivamsTabs');
         gettingItem.then((res) => {
             const profiles = res.shivamsTabs || {};
-            const key = profileName.replace(/^\s+|\s+$/g, '');
+            const key = profileName.replace(/ /g, '');
+            if(!profiles[key]) return false;
             const urls = profiles[key].urls || [];
             // to get current URL
             var querying = browser.tabs.query({currentWindow: true, active: true});
@@ -58,4 +59,3 @@ profileHolder.addEventListener('click', e => {
         }).catch(console.log)
     }
 })
-
